@@ -1,5 +1,8 @@
 #!/bin/bash
 
-python manage.py migrate
-python manage.py runserver 0.0.0.0:8000
-#/usr/local/bin/gunicorn jobs.wsgi:application -w 2 -b :8000
+python manage.py migrate --noinput
+python manage.py collectstatic --noinput
+
+exec gunicorn jobs.wsgi:application \
+    --bind 0.0.0.0:8000 \
+    --workers 2
