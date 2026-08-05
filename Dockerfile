@@ -14,9 +14,14 @@ RUN apt-get update && apt-get install -y \
     libpangocairo-1.0-0 \
     libgdk-pixbuf-2.0-0 \
     libglib2.0-0 \
+    libgirepository-1.0-1 \
     libffi-dev \
     shared-mime-info \
     fonts-dejavu-core \
+    libharfbuzz0b \
+    libfribidi0 \
+    libjpeg62-turbo \
+    libpng16-16 \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
