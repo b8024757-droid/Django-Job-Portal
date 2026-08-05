@@ -11,3 +11,7 @@ requests==2.32.3
 sqlparse==0.5.1
 asgiref==3.8.1
 tzdata==2025.2
+django-elasticsearch-dsl==8.0
+elasticsearch==8.15.1
+elasticsearch-dsl==8.15.4
+elastic-transport==8.15.1
