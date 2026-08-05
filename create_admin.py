@@ -14,8 +14,9 @@ password = "YourStrongPassword123"
 if not User.objects.filter(email=email).exists():
     User.objects.create_superuser(
         email=email,
-        password=password
+        password=password,
+        role="admin"
     )
-    print("Superuser created!")
+    print("✅ Superuser created!")
 else:
-    print("Superuser already exists.")
+    print("ℹ️ Superuser already exists.")
