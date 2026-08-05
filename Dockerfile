@@ -15,13 +15,17 @@ RUN apt-get update && apt-get install -y \
     libgdk-pixbuf-2.0-0 \
     libglib2.0-0 \
     libgirepository-1.0-1 \
-    libffi-dev \
-    shared-mime-info \
-    fonts-dejavu-core \
+    libgirepository-1.0-dev \
+    gir1.2-glib-2.0 \
     libharfbuzz0b \
+    libharfbuzz-dev \
     libfribidi0 \
     libjpeg62-turbo \
     libpng16-16 \
+    libffi-dev \
+    shared-mime-info \
+    fonts-dejavu-core \
+    pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
